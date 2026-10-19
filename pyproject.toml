@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "dental-caries-detector"
+version = "0.1.0"
+description = "Dental Caries Detector using Computer Vision"
+authors = ["Asma Aliouche"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "*"
+torchvision = "*"
+opencv-python-headless = "*"
+numpy = "*"
+pandas = "*"
+matplotlib = "*"
+loguru = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+black = "*"
+ruff = "*"
+jupyter = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 88
+# Enable pycodestyle (E), Pyflakes (F), and isort (I)
+lint.select = ["E", "F", "I"]
